@@ -1,0 +1,131 @@
+.online-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28rpx;
+}
+
+.status-bar,
+.arena,
+.panel {
+  padding: 28rpx;
+}
+
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16rpx;
+}
+
+.status-item {
+  flex: 1;
+}
+
+.status-label,
+.section-title {
+  font-size: 22rpx;
+  color: #ffd166;
+}
+
+.status-value,
+.result-level {
+  margin-top: 12rpx;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.arena {
+  min-height: 520rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hint,
+.result-effect,
+.meta-line {
+  margin-top: 14rpx;
+  color: rgba(246, 247, 251, 0.82);
+  font-size: 26rpx;
+  line-height: 1.7;
+}
+
+.balloon-wrap {
+  width: 320rpx;
+  height: 360rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.balloon {
+  position: relative;
+  width: 240rpx;
+  height: 300rpx;
+  border-radius: 52% 48% 50% 50%;
+  background: radial-gradient(circle at 35% 30%, #ffe29a 0%, #ff89a6 30%, #e63946 100%);
+  box-shadow: 0 30rpx 80rpx rgba(230, 57, 70, 0.35);
+}
+
+.balloon-knot {
+  position: absolute;
+  left: 50%;
+  bottom: -22rpx;
+  width: 24rpx;
+  height: 30rpx;
+  background: #bd1f2d;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.burst {
+  display: flex;
+  min-width: 280rpx;
+  min-height: 280rpx;
+  align-items: center;
+  justify-content: center;
+  padding: 24rpx;
+  border-radius: 50%;
+  color: #14213d;
+  font-size: 56rpx;
+  font-weight: 800;
+  text-align: center;
+  background: radial-gradient(circle, #ffd166 0%, #ffb703 45%, #fb5607 100%);
+}
+
+.stats-row,
+.question-tags,
+.selector-row,
+.action-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.mini-stat,
+.tag,
+.player-chip {
+  padding: 12rpx 18rpx;
+  border-radius: 999rpx;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 24rpx;
+}
+
+.question-content {
+  margin-top: 18rpx;
+  font-size: 30rpx;
+  line-height: 1.75;
+}
+
+.player-chip.active {
+  background: linear-gradient(135deg, #ffd166 0%, #ffb703 100%);
+  color: #14213d;
+  font-weight: 700;
+}
+
+.action-btn {
+  margin-top: 24rpx;
+}
+
+.action-stack {
+  flex-direction: column;
+}

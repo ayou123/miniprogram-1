@@ -1,0 +1,56 @@
+<view class="page-shell start-page">
+  <view class="hero panel">
+    <view class="hero-badge">{{text.start.badge}}</view>
+    <view class="hero-title">{{text.start.title}}</view>
+    <view class="hero-subtitle">{{text.start.subtitle}}</view>
+  </view>
+
+  <view class="player-panel panel">
+    <view class="section-title">{{text.start.playerTitle}}</view>
+    <view class="player-name">{{playerName}}</view>
+    <view class="section-desc">{{text.start.playerHint}}</view>
+    <view class="action-stack">
+      <button class="primary-btn" bindtap="startGame">{{text.start.startLocal}}</button>
+      <button class="secondary-btn" bindtap="openMultiplayer">{{text.start.startOnline}}</button>
+      <button class="secondary-btn" bindtap="openLibrary">{{text.start.editLibrary}}</button>
+    </view>
+  </view>
+
+  <view class="panel">
+    <view class="section-title">{{text.start.rulesTitle}}</view>
+    <view wx:for="{{text.start.rules}}" wx:key="*this" class="list-item">{{item}}</view>
+  </view>
+
+  <view class="panel">
+    <view class="section-title">{{text.start.flowTitle}}</view>
+    <view wx:for="{{text.start.flow}}" wx:key="*this" class="list-item">{{item}}</view>
+  </view>
+
+  <view class="panel">
+    <view class="section-title">{{text.start.manualTitle}}</view>
+    <view wx:for="{{text.start.manual}}" wx:key="*this" class="list-item">{{item}}</view>
+  </view>
+
+  <view class="panel">
+    <view class="section-title">{{text.start.cardsTitle}}</view>
+    <view wx:for="{{cardList}}" wx:key="level" class="card-guide {{item.className}}">
+      <view class="card-top">
+        <view class="card-level">{{item.level}}</view>
+        <view class="card-title">{{item.title}}</view>
+      </view>
+      <view class="card-effect">{{item.effect}}</view>
+      <view class="card-detail">{{item.detail}}</view>
+    </view>
+  </view>
+
+  <view class="panel">
+    <view class="section-title">{{text.start.notesTitle}}</view>
+    <view wx:for="{{text.start.notes}}" wx:key="*this" class="list-item">{{item}}</view>
+  </view>
+
+  <view class="action-stack">
+    <button class="primary-btn" bindtap="startGame">{{text.start.startLocal}}</button>
+    <button class="secondary-btn" bindtap="openMultiplayer">{{text.start.startOnline}}</button>
+    <button class="secondary-btn" bindtap="backHome">{{text.balloon.backHome}}</button>
+  </view>
+</view>

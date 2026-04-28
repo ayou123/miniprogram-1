@@ -1,0 +1,37 @@
+<view class="page-shell result-page">
+  <view class="poster panel {{result.className}}">
+    <view class="poster-badge">SURVIVAL REPORT</view>
+    <view class="player-name">{{playerName}}</view>
+    <view class="summary">{{summary}}</view>
+
+    <view class="meta-grid">
+      <view class="meta-item">
+        <view class="meta-label">{{text.result.pumps}}</view>
+        <view class="meta-value">{{clickCount}}</view>
+      </view>
+      <view class="meta-item">
+        <view class="meta-label">{{text.result.result}}</view>
+        <view class="meta-value">{{result.level}}</view>
+      </view>
+      <view class="meta-item">
+        <view class="meta-label">{{text.result.reward}}</view>
+        <view class="meta-value small">{{result.title}}</view>
+      </view>
+      <view class="meta-item">
+        <view class="meta-label">{{text.result.questionType}}</view>
+        <view class="meta-value small">{{question.type}}</view>
+      </view>
+    </view>
+
+    <view class="question-block">
+      <view class="question-title">{{text.result.roundQuestion}}</view>
+      <view class="question-content">{{question.content}}</view>
+    </view>
+  </view>
+
+  <view class="action-bar">
+    <button class="primary-btn" open-type="share">{{text.result.share}}</button>
+    <button class="secondary-btn" bindtap="playAgain">{{text.result.playAgain}}</button>
+    <button class="secondary-btn" bindtap="goHome">{{text.result.backHome}}</button>
+  </view>
+</view>

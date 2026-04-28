@@ -1,0 +1,83 @@
+<view class="page-shell online-page">
+  <view wx:if="{{room}}" class="status-bar panel">
+    <view class="status-item">
+      <view class="status-label">{{text.online.roomTitle}}</view>
+      <view class="status-value">{{room.id}}</view>
+    </view>
+    <view class="status-item">
+      <view class="status-label">{{text.online.currentTurn}}</view>
+      <view class="status-value">{{display.currentPlayer ? display.currentPlayer.name : '-'}}</view>
+    </view>
+    <view class="status-item">
+      <view class="status-label">{{text.online.status}}</view>
+      <view class="status-value">{{text.online.statuses[room.status] || room.status}}</view>
+    </view>
+  </view>
+
+  <view wx:if="{{room}}" class="arena panel">
+    <view class="hint">{{isMyTurn ? text.online.waitingMessages.yourTurn : room.status === 'playing' ? text.online.waitingMessages.otherTurn : room.status === 'resolving' ? text.online.waitingMessages.resolving : text.online.waitingMessages.finished}}</view>
+    <view class="balloon-wrap">
+      <view wx:if="{{room.status === 'playing'}}" class="balloon">
+        <view class="balloon-knot"></view>
+      </view>
+      <view wx:else class="burst">{{display.loserPlayer ? display.loserPlayer.name : 'BOOM'}}</view>
+    </view>
+    <view class="stats-row">
+      <view class="mini-stat">{{text.online.taps}}: {{room.round.clickCount}}</view>
+      <view class="mini-stat">{{text.online.threshold}}: ?</view>
+    </view>
+  </view>
+
+  <view wx:if="{{room && display.result}}" class="panel result-panel {{display.result.className}}">
+    <view class="section-title">{{text.online.resultTitle}}</view>
+    <view class="result-level">{{display.result.level}} - {{display.result.title}}</view>
+    <view class="result-effect">{{display.result.effect}}</view>
+    <view class="meta-line">{{text.online.roundLoser}}: {{display.loserPlayer ? display.loserPlayer.name : '-'}}</view>
+  </view>
+
+  <view wx:if="{{room && display.question}}" class="panel question-panel">
+    <view class="section-title">{{text.online.questionTitle}}</view>
+    <view class="question-tags">
+      <view class="tag">{{display.question.type}}</view>
+      <view class="tag">{{display.question.targetStar || display.question.star}}{{text.blindbox.starSuffix}}</view>
+    </view>
+    <view class="question-content">{{display.question.content}}</view>
+  </view>
+
+  <view wx:if="{{room && canResolve}}" class="panel">
+    <view class="section-title">{{text.online.resolutionTitle}}</view>
+    <view wx:if="{{display.result.level === 'SR'}}" class="hint">{{text.online.chooseTarget}}</view>
+    <view wx:if="{{display.result.level === 'SSR'}}" class="hint">{{text.online.choosePartner}}</view>
+    <view wx:if="{{display.result.level === 'UR'}}" class="hint">{{text.online.chooseSubstitute}}</view>
+    <view wx:if="{{display.result.level !== 'N'}}" class="selector-row">
+      <view
+        wx:for="{{selectablePlayers}}"
+        wx:key="id"
+        class="player-chip {{targetPlayerId === item.id ? 'active' : ''}}"
+        data-id="{{item.id}}"
+        bindtap="chooseTarget"
+      >
+        {{item.name}}
+      </view>
+    </view>
+    <button class="primary-btn action-btn" bindtap="resolveRound">{{text.online.resolveRound}}</button>
+  </view>
+
+  <view wx:if="{{room && room.status === 'finished'}}" class="panel">
+    <view class="section-title">{{text.online.resolutionTitle}}</view>
+    <view class="hint">{{display.resolutionNames.length ? display.resolutionNames.join(' / ') : '-'}}</view>
+    <button class="primary-btn action-btn" bindtap="nextRound">{{text.online.nextRound}}</button>
+  </view>
+
+  <view class="action-stack">
+    <button
+      wx:if="{{room && room.status === 'playing'}}"
+      class="primary-btn"
+      disabled="{{!isMyTurn}}"
+      bindtap="tapBalloon"
+    >
+      {{isMyTurn ? text.online.tapNow : text.online.waitTurn}}
+    </button>
+    <button class="secondary-btn" bindtap="goBack">{{text.online.lobbyBack}}</button>
+  </view>
+</view>

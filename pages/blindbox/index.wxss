@@ -1,0 +1,215 @@
+.blindbox-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28rpx;
+}
+
+.header {
+  padding: 32rpx;
+}
+
+.title {
+  font-size: 42rpx;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-top: 16rpx;
+  color: rgba(246, 247, 251, 0.76);
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 18rpx;
+}
+
+.blind-card {
+  flex: 1;
+  height: 360rpx;
+  perspective: 1200rpx;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.65s ease;
+}
+
+.blind-card.is-flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 28rpx;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  background: linear-gradient(160deg, #274c77 0%, #1b263b 100%);
+  border: 2rpx solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 18rpx 44rpx rgba(0, 0, 0, 0.2);
+}
+
+.back-title {
+  font-size: 28rpx;
+  letter-spacing: 4rpx;
+  color: #ffd166;
+}
+
+.back-mark {
+  margin-top: 20rpx;
+  font-size: 52rpx;
+  font-weight: 700;
+}
+
+.card-front {
+  transform: rotateY(180deg);
+  color: #14213d;
+  background: linear-gradient(180deg, #ffffff 0%, #ebeff8 100%);
+}
+
+.front-level {
+  font-size: 52rpx;
+  font-weight: 800;
+}
+
+.front-title {
+  margin-top: 18rpx;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.result-card {
+  padding: 28rpx;
+}
+
+.result-hero {
+  padding: 8rpx 4rpx 24rpx;
+}
+
+.result-level {
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.result-effect {
+  margin-top: 16rpx;
+  font-size: 28rpx;
+  line-height: 1.7;
+}
+
+.result-hint {
+  margin-top: 14rpx;
+  font-size: 24rpx;
+  line-height: 1.6;
+  opacity: 0.82;
+}
+
+.detail-surface {
+  padding: 28rpx;
+  border-radius: 24rpx;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: inset 0 1rpx 0 rgba(255, 255, 255, 0.6);
+  color: #14213d;
+}
+
+.detail-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16rpx;
+  flex-wrap: wrap;
+}
+
+.question-tag {
+  display: inline-block;
+  padding: 10rpx 18rpx;
+  border-radius: 999rpx;
+  background: rgba(20, 33, 61, 0.08);
+  color: #14213d;
+  font-size: 22rpx;
+  font-weight: 600;
+}
+
+.star-box {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  color: #fb8500;
+}
+
+.star-label {
+  margin-right: 6rpx;
+  font-size: 22rpx;
+  font-weight: 600;
+}
+
+.star-icon {
+  font-size: 28rpx;
+  line-height: 1;
+}
+
+.question-content {
+  margin-top: 18rpx;
+  font-size: 30rpx;
+  line-height: 1.75;
+  color: #14213d;
+}
+
+.action-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.n .card-front,
+.result-card.n {
+  background: linear-gradient(180deg, #ffffff 0%, #eef2f8 100%);
+  color: #14213d;
+}
+
+.result-card.n .result-effect {
+  color: rgba(20, 33, 61, 0.8);
+}
+
+.sr .card-front,
+.result-card.sr {
+  background: linear-gradient(180deg, #f3e8ff 0%, #d8b4fe 100%);
+  color: #2b124c;
+}
+
+.result-card.sr .detail-surface {
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.ssr .card-front,
+.result-card.ssr {
+  background: linear-gradient(180deg, #fff3c4 0%, #ffd166 100%);
+  color: #402000;
+}
+
+.result-card.ssr .detail-surface {
+  background: rgba(255, 251, 238, 0.9);
+}
+
+.ur .card-front,
+.result-card.ur {
+  background: linear-gradient(135deg, #ffb703 0%, #ff4d6d 35%, #8338ec 65%, #3a86ff 100%);
+  color: #ffffff;
+}
+
+.result-card.ur .detail-surface {
+  background: rgba(255, 255, 255, 0.92);
+}

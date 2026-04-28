@@ -1,0 +1,96 @@
+.result-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28rpx;
+}
+
+.poster {
+  padding: 36rpx 32rpx;
+}
+
+.poster-badge {
+  color: #ffd166;
+  font-size: 22rpx;
+  letter-spacing: 4rpx;
+}
+
+.player-name {
+  margin-top: 18rpx;
+  font-size: 56rpx;
+  font-weight: 800;
+}
+
+.summary {
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  line-height: 1.7;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18rpx;
+  margin-top: 28rpx;
+}
+
+.meta-item {
+  padding: 22rpx;
+  border-radius: 24rpx;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.meta-label {
+  color: rgba(246, 247, 251, 0.72);
+  font-size: 22rpx;
+}
+
+.meta-value {
+  margin-top: 12rpx;
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.meta-value.small {
+  font-size: 28rpx;
+  line-height: 1.5;
+}
+
+.question-block {
+  margin-top: 28rpx;
+  padding: 24rpx;
+  border-radius: 24rpx;
+  background: rgba(11, 16, 32, 0.24);
+}
+
+.question-title {
+  color: #ffd166;
+  font-size: 24rpx;
+}
+
+.question-content {
+  margin-top: 16rpx;
+  font-size: 28rpx;
+  line-height: 1.7;
+}
+
+.action-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.poster.n {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.poster.sr {
+  background: linear-gradient(180deg, rgba(168, 85, 247, 0.24) 0%, rgba(88, 28, 135, 0.22) 100%);
+}
+
+.poster.ssr {
+  background: linear-gradient(180deg, rgba(255, 209, 102, 0.28) 0%, rgba(251, 133, 0, 0.24) 100%);
+}
+
+.poster.ur {
+  background: linear-gradient(135deg, rgba(255, 183, 3, 0.28) 0%, rgba(255, 77, 109, 0.22) 35%, rgba(58, 134, 255, 0.28) 100%);
+}

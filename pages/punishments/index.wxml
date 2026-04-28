@@ -1,0 +1,75 @@
+<view class="page-shell library-page">
+  <view class="panel hero">
+    <view class="title">{{text.library.title}}</view>
+    <view class="subtitle">{{text.library.subtitle}}</view>
+  </view>
+
+  <view class="panel">
+    <view class="level-row">
+      <view
+        wx:for="{{levelOptions}}"
+        wx:key="*this"
+        class="level-chip {{activeLevel === item ? 'active' : ''}}"
+        data-level="{{item}}"
+        bindtap="switchLevel"
+      >
+        {{item}}
+      </view>
+    </view>
+  </view>
+
+  <view class="panel editor">
+    <view class="section-title">{{text.library.createTitle}}</view>
+
+    <view class="field-label">{{text.library.level}}</view>
+    <view class="value-chip">{{activeLevel}}</view>
+
+    <view class="field-label">{{text.library.type}}</view>
+    <picker range="{{typeLabels}}" bindchange="onTypeChange" value="{{typeIndex}}">
+      <view class="picker-field">{{text.library.typeOptions[form.type]}}</view>
+    </picker>
+
+    <view class="field-label">{{text.library.theme}}</view>
+    <picker range="{{themeLabels}}" bindchange="onThemeChange" value="{{themeIndex}}">
+      <view class="picker-field">{{text.library.themeOptions[form.theme]}}</view>
+    </picker>
+
+    <view class="field-label">{{text.library.star}}</view>
+    <input class="input-field" type="number" value="{{form.star}}" bindinput="onStarChange" />
+
+    <view class="field-label">{{text.library.english}}</view>
+    <textarea class="text-area" value="{{form.en}}" data-field="en" bindinput="onTextInput" maxlength="-1"></textarea>
+
+    <view class="field-label">{{text.library.chinese}}</view>
+    <textarea class="text-area" value="{{form.zh}}" data-field="zh" bindinput="onTextInput" maxlength="-1"></textarea>
+
+    <view class="action-grid">
+      <button class="primary-btn" bindtap="saveEntry">{{text.library.save}}</button>
+      <button class="secondary-btn" bindtap="createNew">{{text.library.addNew}}</button>
+      <button class="secondary-btn" bindtap="cancelEdit">{{text.library.cancelEdit}}</button>
+      <button class="secondary-btn" bindtap="resetBank">{{text.library.reset}}</button>
+    </view>
+  </view>
+
+  <view class="panel">
+    <view class="section-title">{{text.library.listTitle}}</view>
+    <block wx:if="{{currentEntries.length}}">
+      <view wx:for="{{currentEntries}}" wx:key="id" class="entry-card">
+        <view class="entry-top">
+          <view class="entry-tags">
+            <text class="tag">{{text.library.typeOptions[item.type]}}</text>
+            <text class="tag">{{text.library.themeOptions[item.theme]}}</text>
+            <text class="tag">{{item.star}}{{text.blindbox.starSuffix}}</text>
+          </view>
+        </view>
+        <view class="entry-text">{{item.zh}}</view>
+        <view class="entry-subtext">{{item.en}}</view>
+        <view class="entry-actions">
+          <button class="secondary-btn mini-btn" data-id="{{item.id}}" bindtap="editEntry">{{text.library.edit}}</button>
+          <button class="secondary-btn mini-btn" data-id="{{item.id}}" bindtap="removeEntry">{{text.library.remove}}</button>
+        </view>
+      </view>
+    </block>
+    <view wx:else class="empty">{{text.library.empty}}</view>
+  </view>
+</view>

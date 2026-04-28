@@ -1,0 +1,91 @@
+<view class="page-shell home-page">
+  <view class="hero panel">
+    <view class="lang-row">
+      <view class="hero-badge">{{text.home.badge}}</view>
+      <button class="lang-switch" bindtap="toggleLanguage">
+        {{text.home.language}}: {{lang === 'zh' ? text.home.switchToEn : text.home.switchToZh}}
+      </button>
+    </view>
+    <view class="hero-title">{{text.home.title}}</view>
+    <view class="hero-subtitle">{{text.home.subtitle}}</view>
+  </view>
+
+  <view class="player-panel panel">
+    <view class="section-title">{{text.home.playerCardTitle}}</view>
+    <view class="player-hint">{{text.home.playerHint}}</view>
+    <input
+      class="name-input"
+      maxlength="12"
+      placeholder="{{text.home.nicknamePlaceholder}}"
+      value="{{playerName}}"
+      bindinput="onNameInput"
+    />
+    <view class="quick-row">
+      <view
+        wx:for="{{quickNames}}"
+        wx:key="*this"
+        class="quick-chip"
+        data-name="{{item}}"
+        bindtap="fillQuickName"
+      >
+        {{item}}
+      </view>
+    </view>
+  </view>
+
+  <view class="library panel">
+    <view class="library-head">
+      <view>
+        <view class="section-title">{{text.home.libraryTitle}}</view>
+        <view class="library-hint">{{text.home.libraryHint}}</view>
+      </view>
+      <button class="secondary-btn mini-btn" bindtap="startGame">{{text.home.enterGame}}</button>
+    </view>
+
+    <view wx:for="{{games}}" wx:key="id" class="game-card {{item.ready ? 'is-ready' : 'is-soon'}}">
+      <view class="game-top">
+        <view class="game-info">
+          <view class="game-title">{{item.title}}</view>
+          <view class="game-desc">{{item.desc}}</view>
+        </view>
+        <view class="game-status">{{item.status}}</view>
+      </view>
+      <button
+        class="{{item.ready ? 'primary-btn' : 'secondary-btn'}} game-action"
+        data-ready="{{item.ready}}"
+        bindtap="openGame"
+      >
+        {{item.ready ? text.home.startThisGame : text.home.comingSoon}}
+      </button>
+    </view>
+  </view>
+
+  <view class="data-panel panel">
+    <view class="library-head">
+      <view>
+        <view class="section-title">{{text.home.dataTitle}}</view>
+        <view class="data-hint">{{text.home.dataHint}}</view>
+      </view>
+      <button class="secondary-btn mini-btn" bindtap="openLibraryManager">{{text.home.manageLibrary}}</button>
+    </view>
+
+    <view class="stat-total">
+      <view class="stat-label">{{text.home.totalQuestions}}</view>
+      <view class="stat-value">{{stats.total}}</view>
+    </view>
+
+    <view class="distribution-block">
+      <view class="distribution-title">{{text.home.themeDistribution}}</view>
+      <view class="distribution-row">
+        <view wx:for="{{stats.themes}}" wx:key="key" class="data-chip">{{item.label}} - {{item.count}}</view>
+      </view>
+    </view>
+
+    <view class="distribution-block">
+      <view class="distribution-title">{{text.home.starDistribution}}</view>
+      <view class="distribution-row">
+        <view wx:for="{{stats.stars}}" wx:key="star" class="data-chip">{{item.star}}* - {{item.count}}</view>
+      </view>
+    </view>
+  </view>
+</view>

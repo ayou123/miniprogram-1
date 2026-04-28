@@ -1,0 +1,47 @@
+page {
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top, #243b6b 0%, #14213d 45%, #0b1020 100%);
+  color: #f6f7fb;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+view,
+text,
+button,
+input {
+  box-sizing: border-box;
+}
+
+.page-shell {
+  min-height: 100vh;
+  padding: 32rpx;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1rpx solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 24rpx 80rpx rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(16rpx);
+  border-radius: 32rpx;
+}
+
+.primary-btn,
+.secondary-btn {
+  width: 100%;
+  border: none;
+  border-radius: 999rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.primary-btn {
+  color: #14213d;
+  background: linear-gradient(135deg, #ffd166 0%, #ffb703 100%);
+}
+
+.secondary-btn {
+  color: #f6f7fb;
+  background: rgba(255, 255, 255, 0.12);
+}

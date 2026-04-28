@@ -1,0 +1,159 @@
+.balloon-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28rpx;
+}
+
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16rpx;
+  padding: 24rpx;
+}
+
+.status-item {
+  flex: 1;
+}
+
+.label {
+  font-size: 22rpx;
+  color: rgba(246, 247, 251, 0.68);
+}
+
+.value {
+  margin-top: 14rpx;
+  font-size: 34rpx;
+  font-weight: 700;
+}
+
+.arena {
+  position: relative;
+  display: flex;
+  flex: 1;
+  min-height: 760rpx;
+  padding: 48rpx 32rpx;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.arena-shake {
+  animation: arenaShake 0.25s linear 3;
+}
+
+.balloon-wrap {
+  position: relative;
+  width: 360rpx;
+  height: 520rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.balloon {
+  position: relative;
+  width: 260rpx;
+  height: 320rpx;
+  border-radius: 52% 48% 50% 50%;
+  background: radial-gradient(circle at 35% 30%, #ffe29a 0%, #ff89a6 30%, #e63946 100%);
+  box-shadow: 0 30rpx 80rpx rgba(230, 57, 70, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.balloon::before {
+  content: '';
+  position: absolute;
+  top: 40rpx;
+  left: 52rpx;
+  width: 54rpx;
+  height: 92rpx;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.24);
+  transform: rotate(18deg);
+}
+
+.balloon-knot {
+  position: absolute;
+  left: 50%;
+  bottom: -22rpx;
+  width: 24rpx;
+  height: 30rpx;
+  background: #bd1f2d;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.balloon-knot::after {
+  content: '';
+  position: absolute;
+  top: 24rpx;
+  left: 10rpx;
+  width: 4rpx;
+  height: 150rpx;
+  background: rgba(255, 255, 255, 0.6);
+  transform: rotate(-45deg);
+  transform-origin: top center;
+}
+
+.balloon.mid {
+  box-shadow: 0 30rpx 90rpx rgba(255, 183, 3, 0.35);
+}
+
+.balloon.high {
+  box-shadow: 0 30rpx 110rpx rgba(255, 0, 110, 0.42);
+}
+
+.burst {
+  display: flex;
+  width: 320rpx;
+  height: 320rpx;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #14213d;
+  font-size: 76rpx;
+  font-weight: 800;
+  background: radial-gradient(circle, #ffd166 0%, #ffb703 45%, #fb5607 100%);
+  box-shadow: 0 0 80rpx rgba(255, 209, 102, 0.45);
+}
+
+.danmaku {
+  position: absolute;
+  top: 40rpx;
+  left: 32rpx;
+  right: 32rpx;
+  padding: 18rpx 24rpx;
+  border-radius: 999rpx;
+  background: rgba(11, 16, 32, 0.55);
+  color: #ffd166;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+.hint {
+  position: absolute;
+  bottom: 42rpx;
+  left: 32rpx;
+  right: 32rpx;
+  text-align: center;
+  color: rgba(246, 247, 251, 0.82);
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+
+.action-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.inflate-btn {
+  height: 92rpx;
+}
+
+@keyframes arenaShake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-10rpx); }
+  50% { transform: translateX(8rpx); }
+  75% { transform: translateX(-6rpx); }
+  100% { transform: translateX(0); }
+}

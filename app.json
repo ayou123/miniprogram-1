@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/start/index",
+    "pages/punishments/index",
+    "pages/room/index",
+    "pages/online-balloon/index",
+    "pages/balloon/index",
+    "pages/blindbox/index",
+    "pages/result/index"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "Balloon Blindbox",
+    "navigationBarBackgroundColor": "#14213d",
+    "backgroundColor": "#0d1b2a",
+    "backgroundTextStyle": "light"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

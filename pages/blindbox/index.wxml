@@ -1,0 +1,51 @@
+<view class="page-shell blindbox-page">
+  <view class="header panel">
+    <view class="title">{{text.blindbox.title}}</view>
+    <view class="subtitle">{{text.blindbox.subtitle}}</view>
+  </view>
+
+  <view class="card-row">
+    <view
+      wx:for="{{cards}}"
+      wx:key="id"
+      class="blind-card {{revealedCardId === item.id ? 'is-flipped' : ''}} {{revealedCardId === item.id ? result.className : ''}}"
+      data-id="{{item.id}}"
+      bindtap="pickCard"
+    >
+      <view class="card-inner">
+        <view class="card-face card-back">
+          <view class="back-title">BLIND BOX</view>
+          <view class="back-mark">0{{index + 1}}</view>
+        </view>
+        <view class="card-face card-front">
+          <view class="front-level">{{result.level || '?'}}</view>
+          <view class="front-title">{{result.title || text.blindbox.waiting}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{revealedCardId}}" class="result-card panel {{result.className}}">
+    <view class="result-hero">
+      <view class="result-level">{{result.level}} - {{result.title}}</view>
+      <view class="result-effect">{{result.effect}}</view>
+      <view class="result-hint">{{text.blindbox.punishmentHint}}</view>
+    </view>
+
+    <view class="detail-surface">
+      <view class="detail-top">
+        <view class="question-tag">{{question.type}}</view>
+        <view class="star-box">
+          <text class="star-label">{{question.star}}{{text.blindbox.starSuffix}}</text>
+          <text wx:for="{{question.stars}}" wx:key="*this" class="star-icon">*</text>
+        </view>
+      </view>
+      <view class="question-content">{{question.content}}</view>
+    </view>
+  </view>
+
+  <view class="action-bar">
+    <button class="primary-btn" bindtap="restartGame">{{text.blindbox.playAgain}}</button>
+    <button class="secondary-btn" bindtap="goResult" disabled="{{!revealedCardId}}">{{text.blindbox.openResult}}</button>
+  </view>
+</view>

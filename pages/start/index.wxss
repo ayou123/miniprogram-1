@@ -1,0 +1,96 @@
+.start-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28rpx;
+}
+
+.hero,
+.player-panel,
+.panel {
+  padding: 32rpx 28rpx;
+}
+
+.hero-badge,
+.section-title {
+  color: #ffd166;
+  font-size: 24rpx;
+}
+
+.hero-title {
+  margin-top: 20rpx;
+  font-size: 48rpx;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-subtitle,
+.section-desc,
+.list-item,
+.card-effect,
+.card-detail {
+  margin-top: 16rpx;
+  color: rgba(246, 247, 251, 0.8);
+  font-size: 28rpx;
+  line-height: 1.7;
+}
+
+.player-name {
+  margin-top: 14rpx;
+  font-size: 44rpx;
+  font-weight: 700;
+}
+
+.action-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18rpx;
+  margin-top: 24rpx;
+}
+
+.card-guide {
+  margin-top: 20rpx;
+  padding: 24rpx;
+  border-radius: 24rpx;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 14rpx;
+  flex-wrap: wrap;
+}
+
+.card-level {
+  min-width: 96rpx;
+  padding: 8rpx 0;
+  border-radius: 999rpx;
+  text-align: center;
+  font-size: 24rpx;
+  font-weight: 700;
+  background: rgba(11, 16, 32, 0.2);
+}
+
+.card-title {
+  font-size: 34rpx;
+  font-weight: 700;
+}
+
+.card-detail {
+  opacity: 0.9;
+}
+
+.n {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(238, 242, 248, 0.06) 100%);
+}
+
+.sr {
+  background: linear-gradient(180deg, rgba(216, 180, 254, 0.22) 0%, rgba(107, 33, 168, 0.16) 100%);
+}
+
+.ssr {
+  background: linear-gradient(180deg, rgba(255, 209, 102, 0.24) 0%, rgba(251, 133, 0, 0.16) 100%);
+}
+
+.ur {
+  background: linear-gradient(135deg, rgba(255, 77, 109, 0.24) 0%, rgba(131, 56, 236, 0.18) 50%, rgba(58, 134, 255, 0.18) 100%);
+}

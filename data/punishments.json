@@ -1,0 +1,314 @@
+{
+  "N": [
+    {
+      "type": "Truth",
+      "theme": "friends",
+      "star": 1,
+      "en": "What is one thing you regret saying recently?",
+      "zh": "最近一次最想撤回的话是什么？"
+    },
+    {
+      "type": "Dare",
+      "theme": "party",
+      "star": 1,
+      "en": "Imitate your best friend for 15 seconds.",
+      "zh": "模仿你最熟悉的人 15 秒。"
+    },
+    {
+      "type": "Truth",
+      "theme": "classic",
+      "star": 1,
+      "en": "What photo on your phone would you never delete?",
+      "zh": "你手机里最舍不得删的一张照片是什么？"
+    },
+    {
+      "type": "Dare",
+      "theme": "party",
+      "star": 1,
+      "en": "Give a dramatic confession to the air for 15 seconds.",
+      "zh": "对着空气深情表白 15 秒。"
+    },
+    {
+      "type": "Truth",
+      "star": 1,
+      "en": "What habit would you most like to change?",
+      "zh": "如果可以重来一次，你最想改掉哪个坏习惯？"
+    },
+    {
+      "type": "Dare",
+      "star": 1,
+      "en": "Say \"I am ready for fate\" like a news anchor.",
+      "zh": "用播音腔念出“我已经准备好接受命运”。"
+    },
+    {
+      "type": "Truth",
+      "star": 1,
+      "en": "When were you secretly jealous last time?",
+      "zh": "你最近一次偷偷羡慕别人是因为什么？"
+    },
+    {
+      "type": "Dare",
+      "star": 1,
+      "en": "Compliment one player three times without repeating.",
+      "zh": "选一位玩家，夸他三句不能重复。"
+    },
+    {
+      "type": "Truth",
+      "theme": "work",
+      "star": 2,
+      "en": "Which app would you delete first if forced?",
+      "zh": "如果今天必须删掉一个社交 App，你删哪个？"
+    },
+    {
+      "type": "Dare",
+      "theme": "party",
+      "star": 2,
+      "en": "Spin three times and introduce yourself seriously.",
+      "zh": "闭眼原地转三圈，然后一本正经地介绍自己。"
+    },
+    {
+      "type": "Truth",
+      "theme": "friends",
+      "star": 2,
+      "en": "What misunderstanding about you annoys you most?",
+      "zh": "你最怕被别人误解成什么样的人？"
+    },
+    {
+      "type": "Dare",
+      "theme": "party",
+      "star": 2,
+      "en": "Say \"I am not nervous\" in three different emotions.",
+      "zh": "把“我不紧张”用三种情绪说出来。"
+    },
+    {
+      "type": "Truth",
+      "theme": "friends",
+      "star": 2,
+      "en": "What tiny thing makes you angry fast?",
+      "zh": "哪件小事最容易瞬间惹怒你？"
+    },
+    {
+      "type": "Dare",
+      "theme": "friends",
+      "star": 2,
+      "en": "Act out your current mood as an animal.",
+      "zh": "把你现在的心情用一种动物表演出来。"
+    },
+    {
+      "type": "Truth",
+      "theme": "couple",
+      "star": 2,
+      "en": "What compliment do you secretly want to hear most?",
+      "zh": "你最想听到别人怎么夸你？"
+    },
+    {
+      "type": "Dare",
+      "theme": "party",
+      "star": 2,
+      "en": "Record a 5-second fake product ad for yourself.",
+      "zh": "给自己录一段 5 秒钟的夸张广告词。"
+    },
+    {
+      "type": "Truth",
+      "star": 2,
+      "en": "Which bad habit do your friends tolerate the most?",
+      "zh": "你觉得朋友最忍你哪一个坏习惯？"
+    },
+    {
+      "type": "Dare",
+      "star": 2,
+      "en": "Pose like a fashion model and freeze for 10 seconds.",
+      "zh": "摆一个时尚杂志封面动作并保持 10 秒。"
+    }
+  ],
+  "SR": [
+    {
+      "type": "Truth",
+      "star": 2,
+      "en": "Say one real thought you never told your friends.",
+      "zh": "说一个你一直没敢告诉朋友的真实想法。"
+    },
+    {
+      "type": "Dare",
+      "star": 2,
+      "en": "Ask one player to name your biggest weakness.",
+      "zh": "随机点名一位玩家，请他评价你最明显的缺点。"
+    },
+    {
+      "type": "Truth",
+      "star": 2,
+      "en": "Describe your last genuine crush moment.",
+      "zh": "你最近一次心动大概发生在什么场景？"
+    },
+    {
+      "type": "Dare",
+      "star": 2,
+      "en": "Give one player an idol-style greeting for 10 seconds.",
+      "zh": "选择一位玩家，对他做 10 秒偶像式打招呼。"
+    },
+    {
+      "type": "Truth",
+      "theme": "couple",
+      "star": 3,
+      "en": "Reveal one thing you are pretending not to care about.",
+      "zh": "说出一件你表面不在乎，其实很在意的事。"
+    },
+    {
+      "type": "Dare",
+      "theme": "party",
+      "star": 3,
+      "en": "Read your last selfie caption in a seductive voice.",
+      "zh": "用最做作的语气念出一条自拍文案。"
+    },
+    {
+      "type": "Truth",
+      "theme": "couple",
+      "star": 3,
+      "en": "Who in the room do you want to know better, and why?",
+      "zh": "现场哪位玩家是你最想进一步了解的，为什么？"
+    },
+    {
+      "type": "Dare",
+      "theme": "friends",
+      "star": 3,
+      "en": "Send a harmless but embarrassing emoji to someone in recent chat.",
+      "zh": "给最近聊天列表里的一位朋友发一个尴尬但无害的表情。"
+    },
+    {
+      "type": "Truth",
+      "theme": "couple",
+      "star": 3,
+      "en": "What kind of person can make you lose your composure fast?",
+      "zh": "什么样的人最容易让你破防？"
+    },
+    {
+      "type": "Dare",
+      "theme": "work",
+      "star": 3,
+      "en": "Let the group assign you a dramatic title for the next round.",
+      "zh": "让全场给你取一个夸张称号，并保持到下一局。"
+    },
+    {
+      "type": "Truth",
+      "star": 3,
+      "en": "If you had to confess to someone here, who would it be?",
+      "zh": "如果现在必须在场内选一个人表白，你会选谁？"
+    },
+    {
+      "type": "Dare",
+      "star": 3,
+      "en": "Read the last message you sent today in a movie trailer voice.",
+      "zh": "用电影预告片的语气念出你今天发的最后一条消息。"
+    }
+  ],
+  "SSR": [
+    {
+      "type": "Truth",
+      "theme": "couple",
+      "star": 4,
+      "en": "Admit one thing you pretend not to care about.",
+      "zh": "当场承认一件你一直装作不在意的事。"
+    },
+    {
+      "type": "Dare",
+      "theme": "party",
+      "star": 4,
+      "en": "Pull another player into a cheesy two-person skit.",
+      "zh": "拉一位玩家一起完成双人土味台词表演。"
+    },
+    {
+      "type": "Truth",
+      "star": 4,
+      "en": "Reveal one fact that would shock an ex.",
+      "zh": "说出一个如果被前任听到会很震惊的事实。"
+    },
+    {
+      "type": "Dare",
+      "star": 4,
+      "en": "Let the group rename you for the next round.",
+      "zh": "让现场所有人一起给你取一个新昵称，并沿用到下一局。"
+    },
+    {
+      "type": "Truth",
+      "theme": "couple",
+      "star": 5,
+      "en": "Who here would be the most dangerous person to fall for?",
+      "zh": "现场谁是最危险、最容易让人上头的人？"
+    },
+    {
+      "type": "Dare",
+      "theme": "party",
+      "star": 5,
+      "en": "Call someone and say one dramatic line chosen by the group.",
+      "zh": "给一位朋友打电话，并按全场指定的台词演 10 秒。"
+    },
+    {
+      "type": "Truth",
+      "star": 5,
+      "en": "Name one person here you would absolutely not date, and explain why.",
+      "zh": "说出现场一位你绝对不会谈的人，并说明原因。"
+    },
+    {
+      "type": "Dare",
+      "star": 5,
+      "en": "Post a silly status chosen by the group and keep it for 3 minutes.",
+      "zh": "发一条由全场决定的搞笑状态，并保留 3 分钟。"
+    },
+    {
+      "type": "Truth",
+      "theme": "work",
+      "star": 4,
+      "en": "What is your most embarrassing attempt to impress someone?",
+      "zh": "你为了吸引别人注意做过最尴尬的事是什么？"
+    },
+    {
+      "type": "Dare",
+      "theme": "party",
+      "star": 4,
+      "en": "Reenact your most dramatic breakup or rejection scene.",
+      "zh": "表演一次你人生中最戏剧化的拒绝或分手现场。"
+    }
+  ],
+  "UR": [
+    {
+      "type": "Privilege",
+      "theme": "classic",
+      "star": 5,
+      "en": "You are safe. Choose another player to answer instead.",
+      "zh": "你免罚，但要指定一位玩家替你回答一道题。"
+    },
+    {
+      "type": "Privilege",
+      "theme": "classic",
+      "star": 5,
+      "en": "You may rewrite the next question into a harder version.",
+      "zh": "本轮你拥有改题权，可以把题目升级成更刺激的版本。"
+    },
+    {
+      "type": "Privilege",
+      "theme": "friends",
+      "star": 5,
+      "en": "Pick any player and downgrade or upgrade their next punishment by one star.",
+      "zh": "你可以指定任意一位玩家，让他的下一题星级上调或下调一星。"
+    },
+    {
+      "type": "Privilege",
+      "theme": "party",
+      "star": 5,
+      "en": "Skip your own punishment and force the group to vote for a substitute player.",
+      "zh": "你直接跳过本轮惩罚，并要求全场投票选出替代者。"
+    },
+    {
+      "type": "Privilege",
+      "star": 5,
+      "en": "Choose one player to reveal two cards next round and take the worse outcome.",
+      "zh": "指定一位玩家下轮必须翻两张卡，并接受更糟的结果。"
+    },
+    {
+      "type": "Privilege",
+      "star": 5,
+      "en": "Declare one temporary safe player and one temporary danger player for the next round.",
+      "zh": "你可以指定下一轮的一位安全玩家和一位高危玩家。"
+    }
+  ]
+}

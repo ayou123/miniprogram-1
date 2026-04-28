@@ -1,0 +1,38 @@
+<view class="page-shell balloon-page">
+  <view class="status-bar panel">
+    <view class="status-item">
+      <view class="label">{{text.balloon.player}}</view>
+      <view class="value">{{playerName}}</view>
+    </view>
+    <view class="status-item">
+      <view class="label">{{text.balloon.pumps}}</view>
+      <view class="value">{{clickCount}}</view>
+    </view>
+    <view class="status-item">
+      <view class="label">{{text.balloon.risk}}</view>
+      <view class="value">{{dangerText}}</view>
+    </view>
+  </view>
+
+  <view class="arena panel {{exploded ? 'arena-shake' : ''}}">
+    <view class="danmaku">{{currentTaunt}}</view>
+    <view class="balloon-wrap">
+      <view
+        wx:if="{{!exploded}}"
+        class="balloon {{dangerClass}}"
+        style="transform: scale({{balloonScale}});"
+      >
+        <view class="balloon-knot"></view>
+      </view>
+      <view wx:else class="burst">BOOM</view>
+    </view>
+    <view class="hint">{{hintText}}</view>
+  </view>
+
+  <view class="action-bar">
+    <button class="primary-btn inflate-btn" bindtap="inflateBalloon" disabled="{{exploded}}">
+      {{exploded ? text.balloon.burst : text.balloon.pumpIt}}
+    </button>
+    <button class="secondary-btn" bindtap="goHome">{{text.balloon.backHome}}</button>
+  </view>
+</view>

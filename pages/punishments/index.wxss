@@ -1,0 +1,99 @@
+.library-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28rpx;
+}
+
+.hero,
+.editor,
+.panel {
+  padding: 30rpx 28rpx;
+}
+
+.title,
+.section-title {
+  font-size: 24rpx;
+  color: #ffd166;
+}
+
+.subtitle,
+.entry-subtext,
+.empty {
+  margin-top: 16rpx;
+  color: rgba(246, 247, 251, 0.76);
+  font-size: 26rpx;
+  line-height: 1.7;
+}
+
+.level-row,
+.entry-tags,
+.entry-actions,
+.action-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.level-chip,
+.value-chip,
+.tag {
+  padding: 12rpx 20rpx;
+  border-radius: 999rpx;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 24rpx;
+}
+
+.level-chip.active {
+  background: linear-gradient(135deg, #ffd166 0%, #ffb703 100%);
+  color: #14213d;
+  font-weight: 700;
+}
+
+.field-label {
+  margin-top: 22rpx;
+  font-size: 24rpx;
+  color: #ffd166;
+}
+
+.picker-field,
+.input-field,
+.text-area {
+  width: 100%;
+  margin-top: 12rpx;
+  padding: 20rpx 22rpx;
+  border-radius: 20rpx;
+  background: rgba(255, 255, 255, 0.94);
+  color: #14213d;
+  font-size: 28rpx;
+}
+
+.text-area {
+  min-height: 180rpx;
+}
+
+.action-grid {
+  margin-top: 24rpx;
+  flex-direction: column;
+}
+
+.entry-card {
+  margin-top: 20rpx;
+  padding: 24rpx;
+  border-radius: 24rpx;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.entry-text {
+  margin-top: 16rpx;
+  font-size: 30rpx;
+  line-height: 1.7;
+}
+
+.mini-btn {
+  width: auto;
+  min-width: 180rpx;
+  padding: 0 26rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  font-size: 24rpx;
+}

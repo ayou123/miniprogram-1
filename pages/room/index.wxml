@@ -1,0 +1,66 @@
+<view class="page-shell room-page">
+  <view class="panel hero">
+    <view class="title">{{text.room.title}}</view>
+    <view class="subtitle">{{text.room.subtitle}}</view>
+    <view class="status-chip {{connected ? 'connected' : 'disconnected'}}">
+      {{connected ? text.room.connected : text.room.disconnected}}
+    </view>
+  </view>
+
+  <view class="panel">
+    <view class="field-label">{{text.start.playerTitle}}</view>
+    <input class="input-field" maxlength="12" value="{{playerName}}" bindinput="onPlayerNameInput" />
+
+    <view class="field-label">{{text.room.serverLabel}}</view>
+    <input class="input-field" value="{{serverUrl}}" bindinput="onServerInput" />
+
+    <view class="field-label">{{text.room.roomCodeLabel}}</view>
+    <input class="input-field" maxlength="8" placeholder="{{text.room.roomCodePlaceholder}}" value="{{roomCodeInput}}" bindinput="onRoomCodeInput" />
+
+    <view class="action-stack">
+      <button class="primary-btn" bindtap="createRoom">{{text.room.createRoom}}</button>
+      <button class="secondary-btn" bindtap="joinRoom">{{text.room.joinRoom}}</button>
+      <button class="secondary-btn" bindtap="syncRoom">{{text.room.syncRoom}}</button>
+    </view>
+  </view>
+
+  <view wx:if="{{room}}" class="panel">
+    <view class="section-head">
+      <view>
+        <view class="field-label">{{text.room.roomIdTitle}}</view>
+        <view class="room-id">{{room.id}}</view>
+      </view>
+      <view class="status-chip">{{text.online.statuses[room.status] || room.status}}</view>
+    </view>
+
+    <view class="field-label">{{text.room.playerListTitle}}</view>
+    <view wx:for="{{room.players}}" wx:key="id" class="player-row">
+      <view class="player-meta">
+        <view class="player-name">{{item.name}}</view>
+        <view class="player-order">#{{item.order + 1}}</view>
+      </view>
+      <view wx:if="{{item.id === room.hostPlayerId}}" class="mini-chip">{{text.room.hostBadge}}</view>
+    </view>
+
+    <view class="hint-text">{{text.room.playerCountHint}}</view>
+    <view class="hint-text">{{text.room.lobbyHint}}</view>
+    <view wx:if="{{room.status === 'lobby' && !isHost}}" class="hint-text">{{text.room.guestHint}}</view>
+
+    <view class="action-stack">
+      <button
+        wx:if="{{room.status === 'lobby' && isHost}}"
+        class="primary-btn"
+        bindtap="startGame"
+      >
+        {{text.room.startGame}}
+      </button>
+      <button
+        wx:if="{{room.status !== 'lobby'}}"
+        class="primary-btn"
+        bindtap="goBattle"
+      >
+        {{text.room.goBattle}}
+      </button>
+    </view>
+  </view>
+</view>
