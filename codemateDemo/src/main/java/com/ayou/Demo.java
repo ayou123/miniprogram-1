@@ -7,7 +7,7 @@ public class Demo {
         return user.getName()+"888";   // 故意没做 null 检查，BugAgent 应该会发现
     }
     public int getUserAge(User user) {
-        return user.getAge()+1;
+        return user.getAge()+2;
     }
     public String getUserSex(User user) {
         return user.getSex();
