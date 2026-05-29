@@ -9,4 +9,7 @@ public class Demo {
     public int getUserAge(User user) {
         return user.getAge();
     }
+    public String getUserSex(User user) {
+        return user.getSex();
+    }
 }
