@@ -6,4 +6,7 @@ public class Demo {
     public String getUserName(User user) {
         return user.getName();   // 故意没做 null 检查，BugAgent 应该会发现
     }
+    public int getUserAge(User user) {
+        return user.getAge();
+    }
 }
